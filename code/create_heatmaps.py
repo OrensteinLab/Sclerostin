@@ -99,7 +99,7 @@ data_df = pd.DataFrame(data)
 #df_all_transposed = data_df.transpose()
 
 heatmap_df(data_df, title='', x_title='Amino acid', y_title='Position', figure_size=(6, 20),
-           cbar_title='log2 enrichment ratio', save_path= 'new_run/FIGURES/log2_left' + '.jpg')
+           cbar_title='log2 enrichment ratio', save_path= 'data/log2_left' + '.jpg')
 
 data = np.asarray(df['3/2_WT']).reshape(190, 20)
 
@@ -107,7 +107,7 @@ data_df = pd.DataFrame(data)
 #df_all_transposed = data_df.transpose()
 
 heatmap_df(data_df, title='', x_title='Amino acid', y_title='Position', figure_size=(6, 20),
-           cbar_title='log2 enrichment ratio', save_path= 'new_run/FIGURES/log2_middle' + '.jpg')
+           cbar_title='log2 enrichment ratio', save_path= 'data/log2_middle' + '.jpg')
 
 test = build_all_possible_mut_df(WTaa)
 merged = pd.concat([ significant_variants_lib21['2/1_WT'], significant_variants_lib32['3/2_WT']], axis=1, sort=True)
@@ -122,4 +122,4 @@ data_df = pd.DataFrame(data)
 #df_all_transposed = data_df.transpose()
 
 heatmap_df(data_df, title='', x_title='Amino acid', y_title='Position', figure_size=(6, 20),
-           cbar_title='log2 enrichment ratio', save_path= 'new_run/FIGURES/log2_right' + '.jpg')
+           cbar_title='log2 enrichment ratio', save_path= 'data/log2_right' + '.jpg')

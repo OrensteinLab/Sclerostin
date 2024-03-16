@@ -97,7 +97,3 @@ for i in mut_numbers_dict.keys():
                       mut_numbers_dict[i]['freq_mutations1'], mut_numbers_dict[i]['freq_mutations2'],
                       mut_numbers_dict[i]['freq_mutations3']], axis=1, sort=True)
     df.to_csv('all data by variants ' + str(i) + ' mutations' + '.csv')
-    test = build_all_possible_mut_df(WTaa)
-    test = pd.concat([test, df], axis=1, sort=True)
-    test = test.sort_values(by=['Pos', 'Mutation'])
-    test.to_csv('all data by variants to heat map ' + str(i) + ' mutations' + '.csv')
